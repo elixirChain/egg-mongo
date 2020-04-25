@@ -22,8 +22,12 @@ describe('test/mongo.test.js', () => {
   });
 
   it('should not be undefined', async () => {
+    const mongo = app.mongo;
     const gridfs = app.gridfs;
+    // const mongo = await app.mongo;
+    // const gridfs = await app.gridfs;
 
+    console.log(mongo);
     console.log(gridfs);
   });
 

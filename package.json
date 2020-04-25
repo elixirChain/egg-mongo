@@ -1,6 +1,6 @@
 {
   "name": "egg-mongo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "mongo plugin for egg",
   "eggPlugin": {
     "name": "mongo"
