@@ -1,7 +1,11 @@
 'use strict';
 
-module.exports = app => {
+module.exports = async app => {
   // load application 'getter' to app
-  // app.gridfs;
-  app.client;
+  // app.mongo;
+  app.beforeStart(async () => {
+    await app.mongo.connect();
+    app.coreLogger.info('[egg-gridfs] connecting mongodb...');
+  });
+
 };
