@@ -2,28 +2,29 @@
 
 /**
  * egg-mongo default config
+ * @see http://mongodb.github.io/node-mongodb-native/3.6/tutorials/connect/
  * @member Config#mongo
  * @property {String} SOME_KEY - some description
  */
 exports.mongo = {
   client: {
     // uri: 'mongodb://username:password@127.0.0.1:12017?authSource=admin',
-    // uri: 'mongodb://127.0.0.1:12017',
-    uri: 'mongodb://139.196.80.85:12017',
+    // uri: 'mongodb://127.0.0.1:12017,127.0.0.1:12018',
+    uri: 'mongodb://127.0.0.1:12017',
     dbName: 'dataDb',
     options: {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       authSource: 'admin',
       auth: {
-        user: 'wjfile',
-        password: 'wjfile',
+        user: 'username',
+        password: 'password',
       },
       // poolSize: 2,
       // ssl: true,
       // replicaSet: 'xxx',
     },
-    fileDbName: 'wj',
+    fileDbName: 'fileDb',
     // fileOptions: {
     //   bucketName: 'test',
     //   chunkSizeBytes: 261120,
